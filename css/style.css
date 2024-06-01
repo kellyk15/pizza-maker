@@ -1,0 +1,201 @@
+body{
+    background-color: beige;
+    font-family: 'chalkduster', Times New Roman , monospace;
+    color: rgb(67, 24, 10);
+}
+.disable{
+    opacity: 0;
+    display: none !important;
+}
+
+#scherm1, #scherm3, #scherm4, #startscherm {
+    display:flex;
+    margin-left: 25em;
+    margin-right: 25em;
+    margin-top: 4em;
+    width: 1280px;
+    height: 800px;
+    background-color: black;
+    position: absolute;
+}
+
+/* startscherm css */
+#startscherm{
+    position: absolute;
+    z-index: 30;
+}
+
+#beginnen{
+    position: absolute;
+    z-index: 30;
+    font-size: 300%;
+    top: 4.5em;
+    left: 6em;
+    text-align: center;
+    color: rgb(237, 221, 190);
+    font-weight: lighter;
+}
+
+#naam{
+    position: absolute;
+    z-index: 30;
+    top: 35em;
+    left: 32em;
+    width: 30em;
+    height: 3em;
+    border-radius: 10px;
+    border-color: rgb(67, 24, 10);
+    border-width: 0.5em;
+}
+
+#startscherm-knop{
+    position: absolute;
+    z-index: 30;
+    top: 34em;
+    left: 30.5em;
+    width: 18em;
+    height: 6em;
+}
+
+
+/* beginscherm css */
+#scherm1{
+    position: absolute;
+    z-index: 10;
+}
+
+#tekst{
+    position: absolute;
+    z-index: 10;
+    top: 4.5em;
+    left: 15em;
+    font-size: xx-large;
+}
+
+#tekst2{
+    position: absolute;
+    z-index: 10;
+    top: 6em;
+    left: 15em;
+    font-size: xx-large;
+}
+
+#begin-button{
+    position: absolute;
+    z-index: 20;
+}
+
+#start-knop{
+    position: absolute;
+    width: 8.5em;
+    height: 3em;
+    top: 19em;
+    left: 56em;
+    z-index: 20;
+}
+
+#ss-bg{
+    position: absolute;
+    z-index: 3;
+}
+#mushroom-topping, #kaas-topping, #salami-topping, #saus-topping, #errormelding{
+    position: absolute;
+    z-index:4;
+}
+#bak-saus, #bak-kaas, #bak-salami, #bak-mushroom{
+    position: absolute;
+    z-index: 4;
+}
+
+#box-mushroom {
+    position: absolute;
+    width: 12em;
+    height: 12em;
+    top: 12em;
+    left: 46em;
+    z-index:5;
+}
+
+#box-saus {
+    position: absolute;
+    width: 12em;
+    height: 12em;
+    top: 12em;
+    left: 60em;
+    z-index: 5;
+}
+
+#box-kaas {
+    position: absolute;
+    width: 12em;
+    height: 12em;
+    top: 26em;
+    left: 46em;
+    z-index: 5;
+}
+
+#box-salami {
+    position: absolute;
+    width: 12em;
+    height: 12em;
+    top: 26em;
+    left: 60em;
+    z-index: 5;
+}
+
+#verdergaan{
+    position: absolute;
+    z-index: 7;
+    top: 40em;
+    left: 60em;
+    width: 12em;
+    height: 5em;
+}
+
+/* ovencss */
+
+#oven-vuur {
+    position: absolute;
+    z-index: 4;
+}
+
+#oven-startpng, #oven-stoppng{
+    position: absolute;
+    z-index: 2;
+}
+
+#oven-start{
+    position: absolute;
+    width: 14.5em;
+    height:5em;
+    top: 41em;
+    left: 43.7em;
+    z-index: 3;
+}
+
+#oven-stop{
+    position: absolute;
+    width: 14.5em;
+    height:5em;
+    top: 41em;
+    left: 60em;
+    z-index: 3;
+}
+
+#oven-aan{
+    position: absolute;
+    z-index: 1;
+}
+#terugstart{
+    position: absolute;
+    z-index: 5;
+} */
+
+/* .appear{
+    opacity: 100;
+    display: block;
+} */
+
+*{
+    transition: all 0.5s;
+}
