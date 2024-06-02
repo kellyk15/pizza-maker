@@ -41,8 +41,10 @@ function NaamtekstEnVolgendeScherm (){
     document.querySelector("#introtekst").textContent = ("Hey " + Naamgebruiker + ", ik heb honger")
 
     htmlschermbegin.classList.add("disable")
+    
+    // bron https://stackoverflow.com/questions/9419263/how-to-play-audio
 
-    let muziek = new Audio("soundtrack.mp3")
+    let muziek = new Audio("soundtrack.mp3");
     muziek.play()
 }
 
