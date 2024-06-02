@@ -8,7 +8,7 @@ body{
     display: none !important;
 }
 
-#scherm1, #scherm3, #scherm4, #startscherm {
+#scherm1, #scherm3, #scherm4, #startscherm, #eindscherm {
     display:flex;
     margin-left: 25em;
     margin-right: 25em;
@@ -24,7 +24,10 @@ body{
     position: absolute;
     z-index: 30;
 }
-
+#eindscherm{
+    position: absolute;
+    z-index: 30;
+}
 #beginnen{
     position: absolute;
     z-index: 30;
@@ -64,7 +67,7 @@ body{
     z-index: 10;
 }
 
-#tekst{
+#introtekst{
     position: absolute;
     z-index: 10;
     top: 4.5em;
@@ -102,7 +105,7 @@ body{
     position: absolute;
     z-index:4;
 }
-#bak-saus, #bak-kaas, #bak-salami, #bak-mushroom{
+.bak{
     position: absolute;
     z-index: 4;
 }
@@ -186,7 +189,12 @@ body{
     position: absolute;
     z-index: 1;
 }
-#terugstart{
+
+#salami-oven, #mushroom-oven{
+    position: absolute;
+    z-index: 3;
+}
+/* #naareind{
     position: absolute;
     z-index: 5;
 } */

@@ -1,13 +1,47 @@
-// javascript startscherm
+// javascript schermen en knoppen
 const htmlschermbegin = document.querySelector("#startscherm")
 
-let starttekst = document.querySelector("#tekst")
-const startschermknop = document.getElementById("startscherm-knop")
+let starttekst = document.querySelector("#introtekst")
+const startschermknop = document.querySelector("#startscherm-knop")
 
+const StartKnop = document.querySelector("#start-knop")
+const htmlscherm1 = document.querySelector("#scherm1")
+
+const VerderKnopSamenstellenscherm = document.querySelector("#verdergaan")
+const htmlscherm3 = document.querySelector("#scherm3")
+
+const htmlscherm4 = document.querySelector("#scherm4")
+const htmlschermeinde = document.querySelector ("#eindscherm")
+
+// knoppen samenstellenscherm
+htmlSaus = document.querySelector("#box-saus")
+htmlKaas = document.querySelector("#box-kaas")
+htmlSalami = document.querySelector("#box-salami")
+htmlMushroom = document.querySelector("#box-mushroom")
+
+let sausElement = document.querySelector("#saus-topping")
+let kaasElement = document.querySelector("#kaas-topping")
+let mushroomElement = document.querySelector("#mushroom-topping")
+let salamiElement = document.querySelector("#salami-topping")
+let errorElement = document.querySelector("#errormelding")
+
+let salamioven = document.querySelector("#salami-oven")
+let mushroomoven = document.querySelector("#mushroom-oven")
+
+// let SausOpPizza = "images/pizza-saus.png"
+// let SalamiOpPizza = "images/pizza-salami.png"
+// let MushroomOpPizza = "images/pizza-mushroom.png"
+// let KaasOpPizza = "images/pizza-kaas.png"
+// let meldingerror = "images/errormelding.png"
+
+
+// javascript startscherm
 function NaamtekstEnVolgendeScherm (){
-    Naamgebruiker = document.getElementById("naam").value;
-    document.querySelector("#tekst").textContent = ("Hey " + Naamgebruiker + ", ik heb honger")
+    Naamgebruiker = document.querySelector("#naam").value;
+    document.querySelector("#introtekst").textContent = ("Hey " + Naamgebruiker + ", ik heb honger")
+
     htmlschermbegin.classList.add("disable")
+
     let muziek = new Audio("soundtrack.mp3")
     muziek.play()
 }
@@ -15,8 +49,6 @@ function NaamtekstEnVolgendeScherm (){
 startschermknop.addEventListener('click',NaamtekstEnVolgendeScherm)
 
 // javascript beginscherm
-StartKnop = document.querySelector("#start-knop")
-const htmlscherm1 = document.querySelector("#scherm1")
 
 function NaarScherm2(){
     htmlscherm1.classList.add("disable")
@@ -27,27 +59,6 @@ function NaarScherm2(){
 StartKnop.addEventListener('click',NaarScherm2)
 
 // javascript samenstellenscherm
-htmlSaus = document.querySelector("#box-saus")
-htmlKaas = document.querySelector("#box-kaas")
-htmlSalami = document.querySelector("#box-salami")
-htmlMushroom = document.querySelector("#box-mushroom")
-
-
-let SausOpPizza = "images/pizza-saus.png"
-let sausElement = document.querySelector("#saus-topping")
-
-let KaasOpPizza = "images/pizza-kaas.png"
-let kaasElement = document.querySelector("#kaas-topping")
-
-let MushroomOpPizza = "images/pizza-mushroom.png"
-let mushroomElement = document.querySelector("#mushroom-topping")
-
-let SalamiOpPizza = "images/pizza-salami.png"
-let salamiElement = document.querySelector("#salami-topping")
-
-let meldingerror = "images/errormelding.png"
-let errorElement = document.querySelector("#errormelding")
-
 let salamistatus = true
 let kaasstatus = true
 let mushroomstatus = true
@@ -56,7 +67,7 @@ let sausstatus = true
 
 function clicksaus(){
     if (sausstatus == true){
-        sausElement.src = SausOpPizza
+        sausElement.src = "images/pizza-saus.png"
         sausstatus = false
     } else {
         sausElement.src = ""
@@ -67,7 +78,7 @@ function clicksaus(){
 
 function clickkaas(){
     if (kaasstatus == true){
-        kaasElement.src = KaasOpPizza
+        kaasElement.src = "images/pizza-kaas.png"
         kaasstatus = false
     } else {
         kaasElement.src = ""
@@ -77,20 +88,24 @@ function clickkaas(){
 
 function clicksalami(){
     if (salamistatus == true){
-        salamiElement.src = SalamiOpPizza
+        salamiElement.src = "images/pizza-salami.png"
+        salamioven.src = "images/oven-salami.png"
         salamistatus = false
     } else {
         salamiElement.src = ""
+        salamioven = ""
         salamistatus = true
     }
 }
 
 function clickmushroom(){
     if (mushroomstatus == true){
-        mushroomElement.src = MushroomOpPizza
+        mushroomElement.src = "images/pizza-mushroom.png"
+        mushroomoven.src = "images/oven-mushroom.png"
         mushroomstatus = false
     } else {
         mushroomElement.src = ""
+        mushroomoven.src = ""
         mushroomstatus = true
     }
 }
@@ -101,12 +116,9 @@ htmlSalami.addEventListener('click',clicksalami)
 htmlMushroom.addEventListener('click',clickmushroom)
 
 
-VerderKnop = document.querySelector("#verdergaan")
-const htmlscherm3 = document.querySelector("#scherm3")
-
 function NaarScherm4(){
     if (sausstatus== true || kaasstatus == true) {
-        errorElement.src = meldingerror
+        errorElement.src = "images/errormelding.png"
     } else {
         htmlscherm3.classList.add("disable")
         console.log("hey");
@@ -114,39 +126,35 @@ function NaarScherm4(){
     }
 }
 
-VerderKnop.addEventListener('click',NaarScherm4)
+VerderKnopSamenstellenscherm.addEventListener('click',NaarScherm4)
 
 // dblclick
 // onload
 
-// javascript ovenDI
-let vuurfoto = "images/oven-vuur.png"
-let brandfoto = "images/oven-aan1.png"
+// javascript oven
 let brandElement = document.querySelector("#oven-aan")
 let vuurElement = document.querySelector("#oven-vuur")
-let ovenstartknop = document.querySelector("#oven-start")
-let ovenstopknop = document.querySelector("#oven-stop")
 
-const htmlschermeinde = "images/eindscherm.png" 
-let startElement = document.querySelector("#terugstart")
+const ovenstartknop = document.querySelector("#oven-start")
+const ovenstopknop = document.querySelector("#oven-stop")
+
 
 function NaarScherm1(){
     htmlscherm1.classList.remove("disable")
     htmlscherm4.classList.add("disable")
     vuurElement.classList.add("disable")
+    clearTimeout(tijd);
 }
 
 function vuur (){
     tijd = setTimeout(brand, 3000);
-    vuurElement.src = brandfoto
+    vuurElement.src = "images/oven-aan1.png"
     console.log("het is aan")
 }
 
 
-const htmlscherm4 = document.querySelector("#scherm4")
-
 function brand (){
-    vuurElement.src = vuurfoto
+    vuurElement.src = "images/oven-vuur.png"
     setTimeout(NaarScherm1,5000);
 }
 
@@ -156,9 +164,12 @@ function vuurUit (){
     setTimeout(naareinde,1000)
 }
 
+
 function naareinde (){
-    startElement.src = htmlschermeinde
+    htmlschermeinde.classList.remove("disable")
+    htmlscherm4.classList.add("disable")
 }
 
 ovenstartknop.addEventListener ("click",vuur)
 ovenstopknop.addEventListener ("click",vuurUit)
+
