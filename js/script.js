@@ -28,11 +28,20 @@ let errorElement = document.querySelector("#errormelding")
 let salamioven = document.querySelector("#salami-oven")
 let mushroomoven = document.querySelector("#mushroom-oven")
 
+let brandElement = document.querySelector("#oven-aan")
+let vuurElement = document.querySelector("#oven-vuur")
+
+const ovenstartknop = document.querySelector("#oven-start")
+const ovenstopknop = document.querySelector("#oven-stop")
+
+
 // let SausOpPizza = "images/pizza-saus.png"
 // let SalamiOpPizza = "images/pizza-salami.png"
 // let MushroomOpPizza = "images/pizza-mushroom.png"
 // let KaasOpPizza = "images/pizza-kaas.png"
 // let meldingerror = "images/errormelding.png"
+// dblclick
+// onload
 
 
 // javascript startscherm
@@ -41,7 +50,7 @@ function NaamtekstEnVolgendeScherm (){
     document.querySelector("#introtekst").textContent = ("Hey " + Naamgebruiker + ", ik heb honger")
 
     htmlschermbegin.classList.add("disable")
-    
+
     // bron https://stackoverflow.com/questions/9419263/how-to-play-audio
 
     let muziek = new Audio("soundtrack.mp3");
@@ -51,7 +60,6 @@ function NaamtekstEnVolgendeScherm (){
 startschermknop.addEventListener('click',NaamtekstEnVolgendeScherm)
 
 // javascript beginscherm
-
 function NaarScherm2(){
     htmlscherm1.classList.add("disable")
     console.log("hey");
@@ -130,17 +138,7 @@ function NaarScherm4(){
 
 VerderKnopSamenstellenscherm.addEventListener('click',NaarScherm4)
 
-// dblclick
-// onload
-
 // javascript oven
-let brandElement = document.querySelector("#oven-aan")
-let vuurElement = document.querySelector("#oven-vuur")
-
-const ovenstartknop = document.querySelector("#oven-start")
-const ovenstopknop = document.querySelector("#oven-stop")
-
-
 function NaarScherm1(){
     htmlscherm1.classList.remove("disable")
     htmlscherm4.classList.add("disable")
