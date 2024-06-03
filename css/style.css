@@ -216,6 +216,6 @@ body{
 } */
 
 *{
-    zoom: 75%;
+    /* zoom: 75%; */
     transition: all 0.5s;
 }
