@@ -52,7 +52,7 @@ function NaamtekstEnVolgendeScherm (){
     htmlschermbegin.classList.add("disable")
 
     // bron https://stackoverflow.com/questions/9419263/how-to-play-audio
-
+    // bron soundtrack https://www.youtube.com/watch?v=BicohIakaos
     let muziek = new Audio("soundtrack.mp3");
     muziek.play()
 }
@@ -169,6 +169,16 @@ function naareinde (){
     htmlschermeinde.classList.remove("disable")
     htmlscherm4.classList.add("disable")
 }
+
+const opnieuwknop = document.querySelector("#opnieuwbeginnen");
+
+//  bron reload function https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button
+
+opnieuwknop.addEventListener("click", function() {
+    window.location.reload();
+  }
+);
+
 
 ovenstartknop.addEventListener ("click",vuur)
 ovenstopknop.addEventListener ("click",vuurUit)
