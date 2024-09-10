@@ -8,6 +8,16 @@ body{
     display: none !important;
 }
 
+@font-face {
+    font-family: 'Chalkduster';
+    src: url('Chalkduster.woff2') format('woff2'),
+        url('Chalkduster.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 #scherm1, #scherm3, #scherm4, #startscherm, #eindscherm {
     display:flex;
     margin-left: 25em;
