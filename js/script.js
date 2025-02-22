@@ -1,4 +1,6 @@
 // javascript schermen en knoppen
+document.body.style.zoom = "75%";
+
 const htmlschermbegin = document.querySelector("#startscherm")
 
 let starttekst = document.querySelector("#introtekst")
